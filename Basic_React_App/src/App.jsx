@@ -1,10 +1,6 @@
 import "./App.css"
+import Title from "./Title.jsx"
 
-
-
-function Title(){
-  return <h1>My First React App</h1>
-}
 function Des(){
   return <h3>I am description</h3>
 }
