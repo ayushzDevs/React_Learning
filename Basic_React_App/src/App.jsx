@@ -7,7 +7,6 @@ function Des(){
 function App() {
   return (
     <div>
-      
       <Title/>
       <Des/>
     </div>
