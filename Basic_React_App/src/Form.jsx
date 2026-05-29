@@ -8,9 +8,9 @@ function HandleForm(event){
 
 function Form() {
   return (
-    <form>
+    <form onSubmit={HandleForm}>
         <input placeholder='type something' />
-        <button onClick={HandleForm}>Submit</button>
+        <button>Submit</button>
     </form>
   )
 }
