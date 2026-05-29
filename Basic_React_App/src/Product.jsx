@@ -15,4 +15,4 @@ function Product({item,price , features}){
     )
 }
 
-export default Product;4
+export default Product;
