@@ -8,9 +8,9 @@ function Product_compo(){
 
     return(
         <div>
-            <Product item="phone" price="30k" features={options}/>
-            {/* <Product item="laptop" price="70k" features={options}/>
-            <Product item="tablet" price={40000} features={options}/> */}
+            <Product item="phone" price={30000} />
+            <Product item="laptop" price={50000} />
+            <Product item="tablet" price={40000} />
             
         </div>
     )
