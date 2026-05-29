@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap");
+
+.product-card {
+    font-family: "Space Grotesk", sans-serif;
+    border: 1px solid #e3e6e6;
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
+    box-shadow: 0 8px 18px rgba(20, 30, 40, 0.08);
+    max-width: 360px;
+}
+
+.product-card__eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0f1111;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+}
+
+.product-card__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.product-card__price {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 6px 0 12px;
+}
+
+.product-card__price-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #565959;
+}
+
+.product-card__price-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #b12704;
+}
+
+.product-card__deal {
+    background: #cc0c39;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 999px;
+}
+
+.product-card__section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f1111;
+    margin: 0 0 6px;
+}
+
+.product-card__list {
+    margin: 0;
+    padding-left: 18px;
+    color: #111;
+}
+
+.product-card__list li {
+    margin-bottom: 4px;
+    font-size: 14px;
+}
