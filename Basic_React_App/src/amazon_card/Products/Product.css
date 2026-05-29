@@ -9,6 +9,7 @@
     background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
     box-shadow: 0 8px 18px rgba(20, 30, 40, 0.08);
     max-width: 360px;
+    border: 1px solid #e3e6e6
 }
 
 .product-card__eyebrow {
