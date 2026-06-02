@@ -14,10 +14,6 @@ function TodoList() {
     })
   }
 
-
-
-
-
   return (
     <div>
         <input placeholder='add a task' value={task} onChange={(e)=>{
@@ -33,11 +29,11 @@ function TodoList() {
         <h4>Todo List</h4>
         <ul>
             {
-              
+
             }
         </ul>
     </div>
   )
 }
 
-export default TodoList
+export default TodoList;
