@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h3><LikeButton/></h3>
+      <h3><Counter/></h3>
     </>
   )
 }

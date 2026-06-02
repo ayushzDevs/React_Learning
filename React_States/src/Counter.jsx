@@ -6,6 +6,8 @@ import { useState } from 'react';
 
 function Counter() {
     let [Count, setCount] = useState(0)
+    console.log("compoonent is rendered");
+    console
 
     let incCount = ()=>{
 
