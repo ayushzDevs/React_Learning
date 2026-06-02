@@ -11,8 +11,23 @@ function Counter() {
 
     let incCount = ()=>{
 
-        setCount(Count+1)
+        // setCount((currVal)=>{
+        //   return currVal +1
+        // });
+        // setCount((currVal)=>{
+        //   return currVal +1
+
+        // });
+        // setCount((currVal)=>{
+        //   return currVal +1
+
+        // });
+
+        // setCount(25)
         // console.log(Count)
+
+
+
     }
 
 
