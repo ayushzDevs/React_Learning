@@ -4,6 +4,8 @@ import { useState } from 'react'
 function LudoBoard() {
     let [moves, setMoves] = useState({blue : 0, red: 0, yellow: 0, green: 0});
 
+    let [arr , setArr] = useState(["no moves"])
+
     let updateBlue=()=>{
         setMoves((prevMoves)=>{
             return {...prevMoves,blue:moves.blue+1}
