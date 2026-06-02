@@ -14,7 +14,10 @@ function LudoBoard() {
 
         })
         // arr.push("blue moves");
-        setArr([...arr,"blue moves"]);
+        setArr((prevArr)=>{
+            prevArr.pop()
+            return [...prevArr,"blue moves"]
+        });
         console.log(arr)
     }
 
@@ -23,6 +26,11 @@ function LudoBoard() {
             return {...prevMoves,red:moves.red+1}
 
         })
+        setArr((prevArr)=>{
+            prevArr.pop()
+            return [...prevArr,"red moves"]
+        });
+        console.log(arr)
     }
 
     let updateYellow=()=>{
@@ -30,6 +38,11 @@ function LudoBoard() {
             return {...prevMoves,yellow:moves.yellow+1}
 
         })
+        setArr((prevArr)=>{
+            prevArr.pop()
+            return [...prevArr,"yellow moves"]
+        });
+        console.log(arr)
     }
 
     let updatGreen=()=>{
@@ -37,6 +50,11 @@ function LudoBoard() {
             return {...prevMoves,green:moves.green+1}
 
         })
+        setArr((prevArr)=>{
+            prevArr.pop()
+            return [...prevArr,"green moves"]
+        });
+        console.log(arr)
     }
 
     
