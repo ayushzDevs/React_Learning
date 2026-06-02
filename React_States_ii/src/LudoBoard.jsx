@@ -10,7 +10,12 @@ function LudoBoard() {
         setMoves((prevMoves)=>{
             return {...prevMoves,blue:moves.blue+1}
 
+            
+
         })
+        // arr.push("blue moves");
+        setArr([...arr,"blue moves"]);
+        console.log(arr)
     }
 
     let updatRed=()=>{
@@ -38,6 +43,7 @@ function LudoBoard() {
   return (
     <div>
         <p>Game Begins !</p>
+        <p> {arr} </p>
         <div className='board'>
 
             <p>Blue Moves = {moves.blue}</p>
