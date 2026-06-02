@@ -13,7 +13,6 @@ function Counter() {
 
         setCount(Count+1)
         // console.log(Count)
-
     }
 
 
