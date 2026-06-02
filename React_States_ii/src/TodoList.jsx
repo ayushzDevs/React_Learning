@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
+import {v4 as uuidv4} from "uuid";
 
 function TodoList() {
 
 
-  let [Todo,setTodo] = useState([])
+  let [Todo,setTodo] = useState({task:"sample",id:uuidv4()})
   const [task,setTask] =useState("")
 
   let updateTodo = ()=>{
@@ -32,9 +33,7 @@ function TodoList() {
         <h4>Todo List</h4>
         <ul>
             {
-              Todo.map((todo,i)=>{
-                return <li key={i}>{todo}</li>
-              })
+              
             }
         </ul>
     </div>
