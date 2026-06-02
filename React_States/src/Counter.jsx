@@ -8,7 +8,7 @@ function init(){
 
 
 function Counter() {
-    let [Count, setCount] = useState(init())
+    let [Count, setCount] = useState(init)
     console.log("compoonent is rendered");
     console
 
