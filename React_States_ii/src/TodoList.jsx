@@ -5,12 +5,12 @@ import {v4 as uuidv4} from "uuid";
 function TodoList() {
 
 
-  let [Todo,setTodo] = useState([{todo:"sample",id:uuidv4()}])
+  let [Todo,setTodo] = useState([{todo:"sample",id:uuidv4(), done:false}])
   const [task,setTask] =useState("")
 
   let addnewTask = ()=>{
     setTodo((prevTodo)=>{
-      return[...prevTodo,{todo: task, id:uuidv4()}]
+      return[...prevTodo,{todo: task, id:uuidv4(), done:false}]
     })
     setTask("")
   }
@@ -76,6 +76,20 @@ function TodoList() {
     })
   }
 
+  let toggleDone = (id)=>{
+    setTodo((prevTodo)=>{
+      return prevTodo.map((t)=>{
+        if(t.id==id){
+          return {
+            ...t,
+            done: !t.done
+          }
+        }
+        return t;
+      })
+    })
+  }
+
 
 
   return (
@@ -95,10 +109,19 @@ function TodoList() {
               Todo.map((t)=>{
                 return (
                 <li key={t.id}>
-                  <span>{t.todo}</span>
+                  <span style={{textDecoration: t.done ? "line-through" : "none"}}>{t.todo}</span>
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <br />
                   <button onClick={()=>deleteTodo(t.id)}>Delete</button>
+                  <br />
+                  <button
+                    onClick={()=>toggleDone(t.id)}
+                    aria-label={t.done ? "Mark not done" : "Mark done"}
+                    title={t.done ? "Mark not done" : "Mark done"}
+                    type="button"
+                  >
+                    <i className={t.done ? "fa-solid fa-square-check" : "fa-regular fa-square"} aria-hidden="true"></i>
+                  </button>
                   <br />
                   <button onClick={()=>upperCaseOne(t.id)}>UpperCase One</button>
                   <br />
