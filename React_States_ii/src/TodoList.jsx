@@ -22,8 +22,26 @@ function TodoList() {
 
   let deleteTodo=(id)=>{
 
-    setTodo(Todo.filter((t)=> t.id != id));
+    setTodo(prev => prev.filter(t => t.id !== id));
 
+  }
+
+  let upperCaseAll = ()=>{
+    setTodo(Todo.map((t)=>{
+      return {
+        ...t, 
+        todo: t.todo.toUpperCase()
+      }
+    }))
+  }
+
+  let lowerCaseAll = ()=>{
+    setTodo(Todo.map((t)=>{
+      return{
+        ...t,
+        todo: t.todo.toLowerCase()
+      }
+    }))
   }
 
 
@@ -50,6 +68,10 @@ function TodoList() {
               })
             }
         </ul>
+        <br /><br />
+        <button onClick={upperCaseAll}>UpperCase All</button>
+        <br /><br />
+        <button onClick={lowerCaseAll}>LowerCase All</button>
     </div>
   )
 }
