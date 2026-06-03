@@ -44,6 +44,39 @@ function TodoList() {
     }))
   }
 
+  let upperCaseOne = (id)=>{
+    setTodo((prevTodo)=>{
+      return prevTodo.map((t)=>{
+        if(t.id==id){
+          return{
+            ...t,
+            todo: t.todo.toUpperCase()
+          }
+        }
+        else{
+          return t;
+        }
+      })
+    })
+  }
+
+    let LowerCaseOne = (id)=>{
+    setTodo((prevTodo)=>{
+      return prevTodo.map((t)=>{
+        if(t.id==id){
+          return{
+            ...t,
+            todo: t.todo.toLowerCase()
+          }
+        }
+        else{
+          return t;
+        }
+      })
+    })
+  }
+
+
 
   return (
     <div>
@@ -64,14 +97,23 @@ function TodoList() {
                 <li key={t.id}>
                   <span>{t.todo}</span>
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <button onClick={()=>deleteTodo(t.id)}>Delete</button></li>)
+                  <br />
+                  <button onClick={()=>deleteTodo(t.id)}>Delete</button>
+                  <br />
+                  <button onClick={()=>upperCaseOne(t.id)}>UpperCase One</button>
+                  <br />
+                  <button onClick={()=>LowerCaseOne(t.id)}>LowerCase One</button>
+                  </li>)
+
               })
+              
             }
         </ul>
         <br /><br />
         <button onClick={upperCaseAll}>UpperCase All</button>
         <br /><br />
         <button onClick={lowerCaseAll}>LowerCase All</button>
+        
     </div>
   )
 }
