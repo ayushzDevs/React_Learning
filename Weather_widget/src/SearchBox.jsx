@@ -18,7 +18,7 @@ function SearchBox() {
   let getWeatherInfo = async()=>{
     let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`)
     let jsonResponse = await response.json()
-    // console.log(jsonResponse)
+    console.log(jsonResponse)
 
     let res = {
       temp: jsonResponse.main.temp,
@@ -27,7 +27,8 @@ function SearchBox() {
       weatherMood: jsonResponse.weather[0].main,
       name: jsonResponse.name,
       speed: jsonResponse.wind.speed,
-      country: jsonResponse.sys.country
+      country: jsonResponse.sys.country,
+      feelslike: jsonResponse.main.feels_like
     }
     console.log(res);
   }
