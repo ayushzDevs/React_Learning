@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import "./SearchBox.css"
+import WeatherApp from './WeatherApp';
 
-
-function SearchBox() {
+function SearchBox({updateInfo}) {
 
   
 
@@ -30,7 +30,7 @@ function SearchBox() {
       country: jsonResponse.sys.country,
       feelslike: jsonResponse.main.feels_like
     }
-    console.log(res);
+    return res;;
   }
 
   let [city , setCity] = useState("")
@@ -39,20 +39,20 @@ function SearchBox() {
     setCity(e.target.value)
   }
 
-  let handleSubmit = (e)=>{
+  let handleSubmit = async(e)=>{
     e.preventDefault();
-    
     setCity("")
-    getWeatherInfo();
+    let newInfo =await getWeatherInfo();
+    updateInfo(newInfo)
   }
 
   return (
     <div className='SearchBox'>
-        <h1>search box for weather</h1>
         <form onSubmit={handleSubmit}>
               <TextField id="outlined-basic" label="City Name" variant="outlined" required onChange={handleChange}/>
               <br /><br />
               <Button variant='contained' type='submit' >Search</Button>
+              <br /><br /><br /><br />
         </form>
     </div>
   )

@@ -7,26 +7,17 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import "./InfoBox.css"
 
-function InfoBox() {
+function InfoBox({ info }) {
 
-    let info = {
+    const INIT_URL = "https://plus.unsplash.com/premium_vector-1722006399427-8b81a53dbe7f?q=80&w=2040&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
-        country: "IN",
-        humidity: 65,
-        name: "Kolkata",
-        pressure: 1001,
-        speed: 4.52,
-        temp: 30,
-        feels_like: 38,
-    }
   return (
     <div className='InfoBox'>
-        <h1>Weather Info</h1>
-        <div className='Card'>
-        <Card sx={{ maxWidth: 345 }}>
+        <div className='CardContainer'>
+        <Card sx={{ maxWidth: 500 }}>
             <CardMedia
-                sx={{ height: 140 }}
-                image="/static/images/cards/contemplative-reptile.jpg"
+                sx={{ height: 140, width: 500 }}
+                image={INIT_URL}
                 title="green iguana"
             />
             <CardContent>
