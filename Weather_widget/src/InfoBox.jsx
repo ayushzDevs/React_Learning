@@ -21,7 +21,7 @@ function InfoBox({ info }) {
                 sx={{ height: 140, width: 500 }}
                 image={info.humidity>80 ? RAINY_URL : info.temp>26 ? HOT_URL:COLD_URL}
                 title="green iguana"
-            />
+             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                     {info.name}
